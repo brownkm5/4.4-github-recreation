@@ -8,7 +8,55 @@
   </head>
   <body>
 
+    <div class="contain">
+      <div class="header row col-sm-12">
 
+        <div class="col-sm-7 col-sm-offset-1">
+          <img class="logo" src="images/GitHub-Mark-32px.png" alt="">
+          <input class="search-bar" type="text" placeholder="Search GitHub">
+          <span class="pull">Pull Requests</span>
+          <span class="issues">Issues</span>
+          <span class="gist">Gist</span>
+        </div>
+        <div class="col-sm-2 col-sm-offset-2">
+          <div class="right glyphicon glyphicon-plus"><span class="caret"></span></div>
+          <img class="profile-sm" src="images/profile-sm.jpeg" alt=""><span class="caret"></span>
+        </div>
+
+      </div>
+
+      <aside class="col-sm-3 aside">
+        <img class="col-sm-12" src="images/profile-lg.jpeg" alt=""/>
+
+      </aside>
+
+      <section class="row col-sm-9">
+        <ul id='repo-list'>
+
+        </ul>
+      </section>
+
+    </div>
+
+    <script id="repo-template" type="text/x-handlebars-template">
+        <li class="col-sm-12 row">
+          <div class="col-sm-6"><a href="{{html_url}}"><span class="col-sm-12">{{name}}</span></a><span class="col-sm-12">{{description}}</span></div>
+          <div class="col-sm-2 line"></div>
+          <span class="col-sm-2">{{language}}</span>
+          <span class="col-sm-2 glyphicon glyphicon-star"> {{stargazers_count}}</span>
+        </li>
+        </script>
+
+        <script id="aside-template" type="text/x-handlebars-template">
+            <span class="name">{{name}}</span>
+            <span class="email">{{email}}</span>
+            <span class="bio">{{bio}}</span>
+            <div class=""><button type="button" name="button">Edit Profile</button></div>
+            <span class="location">{{location}}</span>
+            <span class="email">{{email}}</span>
+            <span class="created-at">{{created_at}}</span>
+            <span class="organization"><p>Organization</p></span>
+        </script>
 
     <script src="js/bundle.js"></script>
   </body>
