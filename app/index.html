@@ -14,7 +14,7 @@
         <div class="col-sm-7 col-sm-offset-1">
           <img class="logo" src="images/GitHub-Mark-32px.png" alt="">
           <input class="search-bar" type="text" placeholder="Search GitHub">
-          <span class="pull">Pull Requests</span>
+          <span class="pull">Pull requests</span>
           <span class="issues">Issues</span>
           <span class="gist">Gist</span>
         </div>
@@ -25,38 +25,88 @@
 
       </div>
 
+      <div class="body">
+
       <aside class="col-sm-3 aside">
-        <img class="col-sm-12" src="images/profile-lg.jpeg" alt=""/>
+        <img class="col-sm-12 profile-lg" src="images/profile-lg.jpeg" alt=""/>
 
       </aside>
 
       <section class="row col-sm-9">
-        <ul id='repo-list'>
+
+        <ul id="repo-header">
+          <li class="hvr">Overview</li>
+          <li class="hvr repositories">Repositories <span class="num">16</span></li>
+          <li class="hvr">Stars <span class="num">1</span></li>
+          <li class="hvr">Followers <span class="num">0</span></li>
+          <li class="hvr">Following <span class="num">0</span></li>
+        </ul>
+
+        <div class="bottom-header">
+          <input class="search-repos" type="text" name="name" placeholder="Search repositories">
+          <div class="buttons" role="group">
+            <button type="button" class="btn btn-default header-button">
+              <span class="lighter">Type: </span><span class="bold">All</span><span class="caret"></span></button>
+
+            <button type="button" class="btn btn-default header-button-two">
+              <span class="lighter">Language: </span><span class="bold">All</span><span class="caret"></span></button>
+
+              <button type="button" class="btn btn-default glyphicon glyphicon-book bold white"> <span class="arial">New</span></button>
+          </div>
+
+        </div>
+        <ul id='repo-list' class="row">
 
         </ul>
       </section>
 
+      <footer class="col-sm-10 col-sm-offset-1 row">
+        <div class="left-footer">
+          <a href="#" class="copyright">© 2016 GitHub, Inc.</a>
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+          <a href="#">Security</a>
+          <a href="#">Status</a>
+          <a href="#">Help</a>
+        </div>
+        <div class="footer-icon">
+          <img class="icon-footer" src="images/GitHub-Mark-32px.png" alt="">
+        </div>
+        <div class="right-footer">
+          <a href="#">Contact GitHub</a>
+          <a href="#">Api</a>
+          <a href="#">Training</a>
+          <a href="#">Shop</a>
+          <a href="#">Blog</a>
+          <a href="#">About</a>
+        </div>
+      </footer>
+
+      </div>
     </div>
 
-    <script id="repo-template" type="text/x-handlebars-template">
-        <li class="col-sm-12 row">
-          <div class="col-sm-6"><a href="{{html_url}}"><span class="col-sm-12">{{name}}</span></a><span class="col-sm-12">{{description}}</span></div>
-          <div class="col-sm-2 line"></div>
-          <span class="col-sm-2">{{language}}</span>
-          <span class="col-sm-2 glyphicon glyphicon-star"> {{stargazers_count}}</span>
-        </li>
-        </script>
 
-        <script id="aside-template" type="text/x-handlebars-template">
-            <span class="name">{{name}}</span>
-            <span class="email">{{email}}</span>
-            <span class="bio">{{bio}}</span>
-            <div class=""><button type="button" name="button">Edit Profile</button></div>
-            <span class="location">{{location}}</span>
-            <span class="email">{{email}}</span>
-            <span class="created-at">{{created_at}}</span>
-            <span class="organization"><p>Organization</p></span>
-        </script>
+    <script id="repo-template" type="text/x-handlebars-template">
+      <li class="col-sm-12 repo-item">
+        <div class="repo-name col-sm-6"><a href="{{html_url}}"><span class="col-sm-12">{{name}}</span></a><span class="col-sm-12">{{description}}</span></div>
+        <div class="col-sm-2 line"></div>
+        <span class="col-sm-2">{{language}}</span>
+        <span class="col-sm-2 glyphicon glyphicon-star"> {{stargazers_count}}</span>
+      </li>
+    </script>
+
+    <script id="aside-template" type="text/x-handlebars-template">
+      <span class="np name col-sm-12">{{name}}</span>
+      <span class="np username col-sm-12">{{login}}</span>
+      <span class="np bio col-sm-12">Add a bio</span>
+      <div class="np col-sm-12"><button type="button" class="edit-profile btn btn-default">Edit Profile</button></div>
+      <div class='under'>
+        <span class="np location col-sm-12"><span class="glyphicon glyphicon-map-marker "></span> {{location}}</span>
+        <span class="np email col-sm-12"><span class="glyphicon glyphicon-envelope"></span> <a href="">{{email}}</a></span>
+        <span class="np created-at col-sm-12"><span class="glyphicon glyphicon-time"></span> Joined on Aug 31, 2016</span>
+      </div>
+      <span class="np organization col-sm-12"><p>Organizations</p></span>
+    </script>
 
     <script src="js/bundle.js"></script>
   </body>

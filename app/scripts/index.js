@@ -14,11 +14,24 @@ if(githubtoken !== undefined){
 $.ajax('https://api.github.com/users/brownkm5').then(displayUserInfo);
 
 $.ajax('https://api.github.com/users/brownkm5/repos').then(displayUserRepo);
+// $.ajax('https://api.github.com/users/brownkm5/repos').then(displayHeader);
+
 
 // $.ajax('https://api.github.com/users/brownkm5/orgs').then(displayUserCategories);
 
+// function displayHeader(data){
+//   console.log(data);
+//   var header = data;
+//   var $headerContainer = $('repo-header');
+//
+//   var source = $('#header-template').html();
+//   var template = Handlebars.compile(source);
+//
+//   $headerContainer.append(template(header));
+// }
+
 function displayUserInfo(data){
-  console.log(data);
+  //console.log(data);
   var user = data;
   var $profileContainer = $('aside');
 
@@ -29,7 +42,7 @@ function displayUserInfo(data){
 }
 
 function displayUserRepo(data){
-  console.log(data);
+  //console.log(data);
   var repos = data;
   var $repoContainer = $('#repo-list'); //ul that holds the list of repos
 
