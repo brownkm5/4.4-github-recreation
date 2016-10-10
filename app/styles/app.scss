@@ -130,6 +130,14 @@ section{
   font-size: 16px;
   font-weight: bold;
 }
+.org-logo{
+  border-radius: 3px;
+  height: 35px;
+  width: 35px;
+  display: inline-block;
+  cursor: pointer;
+}
+
 
 //body
 #repo-header li{
@@ -192,17 +200,29 @@ font-weight: bold;
   margin-top: -3px;
   color: white;
   background-color: rgb(133,	216,	104);
-}
-.arial{
   font-family: arial;
 }
+
 #repo-list{
   margin-left: 10px;
-  margin-top: 15px;
+  margin-bottom: 40px;
 }
 
 .repo-item{
-  height: 100px;
+  height: 90px;
+  border-bottom: 1px solid rgb(238, 238, 238);
+  vertical-align: middle;
+  padding-top: 25px;
+  padding-bottom: 30px;
+}
+.repo-name{
+  color: #4078c0;
+  font-size: 16px;
+  font-weight: 600;
+}
+.description{
+  color: #767676;
+  font-size: 14px;
 }
 .line{
   margin-left: -20px;
@@ -211,7 +231,35 @@ font-weight: bold;
   border-bottom: 2px solid rgb(196,	207,	148);
 }
 
-
+footer{
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-top: 1px solid rgb(238, 238, 238);
+}
 .left-footer, .footer-icon, .right-footer{
   display: inline-block;
+}
+.ft{
+  margin-right: 15px;
+  font-size: 12px;
+}
+.copyright{
+  color: #767676;
+}
+.icon-footer{
+  width: 24px;
+  height: 24px;
+  color: rgb(204, 204, 204);
+  margin-left: 115px;
+  margin-right: 115px;
+}
+.language{
+  color: #767676;
+}
+.stargazers{
+  color: #767676;
+}
+.stargazers:hover{
+  cursor: pointer;
+  color: #4078c0;
 }
