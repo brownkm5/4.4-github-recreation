@@ -36,7 +36,7 @@
 
         <ul id="repo-header">
           <li class="hvr">Overview</li>
-          <li class="hvr repositories">Repositories <span class="num">16</span></li>
+          <li class="hvr repositories">Repositories <span class="num">17</span></li>
           <li class="hvr">Stars <span class="num">1</span></li>
           <li class="hvr">Followers <span class="num">0</span></li>
           <li class="hvr">Following <span class="num">0</span></li>
@@ -51,7 +51,7 @@
             <button type="button" class="btn btn-default header-button-two">
               <span class="lighter">Language: </span><span class="bold">All</span><span class="caret"></span></button>
 
-              <button type="button" class="btn btn-default glyphicon glyphicon-book bold white"> <span class="arial">New</span></button>
+              <button type="button" class="btn btn-default bold white"><span class="glyphicon glyphicon-book "></span> New</button>
           </div>
 
         </div>
@@ -60,25 +60,25 @@
         </ul>
       </section>
 
-      <footer class="col-sm-10 col-sm-offset-1 row">
+      <footer class="col-sm-12 row">
         <div class="left-footer">
-          <a href="#" class="copyright">© 2016 GitHub, Inc.</a>
-          <a href="#">Terms</a>
-          <a href="#">Privacy</a>
-          <a href="#">Security</a>
-          <a href="#">Status</a>
-          <a href="#">Help</a>
+          <span class="ft copyright">© 2016 GitHub, Inc.</span>
+          <a class="ft" href="#">Terms</a>
+          <a class="ft" href="#">Privacy</a>
+          <a class="ft" href="#">Security</a>
+          <a class="ft" href="#">Status</a>
+          <a class="ft" href="#">Help</a>
         </div>
         <div class="footer-icon">
           <img class="icon-footer" src="images/GitHub-Mark-32px.png" alt="">
         </div>
         <div class="right-footer">
-          <a href="#">Contact GitHub</a>
-          <a href="#">Api</a>
-          <a href="#">Training</a>
-          <a href="#">Shop</a>
-          <a href="#">Blog</a>
-          <a href="#">About</a>
+          <a class="ft" href="#">Contact GitHub</a>
+          <a class="ft" href="#">Api</a>
+          <a class="ft" href="#">Training</a>
+          <a class="ft" href="#">Shop</a>
+          <a class="ft" href="#">Blog</a>
+          <a class="ft" href="#">About</a>
         </div>
       </footer>
 
@@ -88,10 +88,10 @@
 
     <script id="repo-template" type="text/x-handlebars-template">
       <li class="col-sm-12 repo-item">
-        <div class="repo-name col-sm-6"><a href="{{html_url}}"><span class="col-sm-12">{{name}}</span></a><span class="col-sm-12">{{description}}</span></div>
+        <div class="col-sm-6"><a href="{{html_url}}"><span class="repo-name col-sm-12">{{name}}</span></a><span class="description col-sm-12">{{description}}</span></div>
         <div class="col-sm-2 line"></div>
-        <span class="col-sm-2">{{language}}</span>
-        <span class="col-sm-2 glyphicon glyphicon-star"> {{stargazers_count}}</span>
+        <span class="language col-sm-2">{{language}}</span>
+        <span class="stargazers col-sm-2"><span class=" glyphicon glyphicon-star"></span> {{stargazers_count}}</span>
       </li>
     </script>
 
@@ -106,6 +106,7 @@
         <span class="np created-at col-sm-12"><span class="glyphicon glyphicon-time"></span> Joined on Aug 31, 2016</span>
       </div>
       <span class="np organization col-sm-12"><p>Organizations</p></span>
+      <a href="https://github.com/tiy-greenville-front-end-fall-2016"><img class="org-logo" src="images/org-logo.png" alt="" /></a>
     </script>
 
     <script src="js/bundle.js"></script>
